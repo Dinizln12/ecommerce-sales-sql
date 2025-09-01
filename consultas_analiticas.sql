@@ -11,7 +11,7 @@
 	FROM vendas
 	GROUP BY canal_venda;
 
-	--Produtos mais vendidos LIMIT não é utilizado 
+	--Produtos mais vendidos LIMIT nÃ£o Ã© utilizado 
 	SELECT TOP 10 produto, SUM(quantidade) AS total_vendas
 	FROM vendas
 	GROUP BY produto
@@ -42,7 +42,7 @@ SELECT COUNT(*) AS total_vendas FROM vendas;
 -- Receita total
 SELECT SUM(preco_unitario * quantidade) AS receita_total FROM vendas;
 
--- Média de vendas por dia
+-- MÃ©dia de vendas por dia
 SELECT AVG(quantidade) AS media_vendas_diaria FROM vendas;
 
 -- Produto mais vendido
@@ -57,7 +57,7 @@ FROM vendas
 GROUP BY produto
 ORDER BY receita DESC;
 
---PADRÕES POR CATEGORIA / CANAL / TEMPO
+--PADRÃ•ES POR CATEGORIA / CANAL / TEMPO
 
 -- Receita por categoria
 SELECT categoria, SUM(preco_unitario * quantidade) AS receita
